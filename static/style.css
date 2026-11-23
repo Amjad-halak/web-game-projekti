@@ -1,0 +1,62 @@
+
+
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 0px;
+    width: 100%;
+    height: 100vh;
+
+}
+    
+.UpDiv {
+    grid-column: span 5 / span 5;
+    background-color: beige;
+    height: 100px;
+    width: 100%;
+
+}
+
+.LeftDiv {
+    background-color: darkgray;
+    grid-row: span 3 / span 3;
+    grid-row-start: 2;
+    height: 100%;
+    width: 20%; 
+
+}
+
+.RightDiv {
+    background-color: red;
+    grid-row: span 3 / span 3;
+    grid-column-start: 5;
+    grid-row-start: 2;
+    height: 100%;
+    width: 20%;
+    justify-self: flex-end;
+
+}
+
+.BottomDiv {
+    background-color: blue;
+    grid-column: span 5 / span 5;
+    grid-column-start: 1;
+    grid-row-start: 5;
+    height: 100px;
+    width: 100%;
+    margin-top: px;
+
+}
+
+.CenterDiv {
+    background-color: darkslategray;
+    grid-column: span 3 / span 3;
+    grid-row: span 3 / span 3;
+    grid-column-start: 2;
+    grid-row-start: 2;
+
+    
+
+}
