@@ -15,6 +15,6 @@ GTA VII:
 sumennettu, work in progress. työmaa värinauha
 
 Peli 4:
-Matopeli:
+peli X:
 sumennettu, work in progress, työmaa värinauha
 
