@@ -3,7 +3,7 @@
 2 peliä ja 2 peliä "work in progress" sumennettuna
 
 Peli 1:
-Värimuisti peli (Simon) 
+Värimuisti peli (Simon)
 Pelissä neljä eri ruutua syttyvät vuorotellen ja pitää muistaa oikea järjestys
 
 Peli 2:
@@ -18,3 +18,4 @@ Peli 4:
 Matopeli:
 sumennettu, work in progress, työmaa värinauha
 
+Test branch workflow by Amjad
