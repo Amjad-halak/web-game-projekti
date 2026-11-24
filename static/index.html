@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Arcadia</title>
+    <title>ArcadiaIndex</title>
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css" />
 
@@ -10,26 +10,38 @@
 
 <body>
     <div class="parent">
-        <div class="UpDiv">y
+        <div class="UpDiv">
             <div class="logo_div">
                 <img src="img/arcadia.png" alt="Logo_picture" />
             </div>
         </div>
         <div class="CenterDiv">
-            <div class="row1">
-                <img src="img/arcadia.png" alt="Logo_picture2" />
-             <!--logo here-->
-             </div>
-            <div class="row2">Rivi 2</div>
-            <!--name here-->
-            <div class="row3">Rivi 3</div>
-            <!--avatar?-->
-            <div class="row4">Rivi 4</div>
-            <!--Enter here-->
+            <div class="I_row1">
+                <h1>Welcum to Arcadia!</h1>
+                <h2>Enter your name to start the game</h2>
+            </div>
 
+            <div class="I_row2">
+            <form id="player_form" class="name_form" action="/game" method="post">
+                 <!--Name for the player-->
+                <input  type="text"
+                        name="username"
+                        class="name_input"
+                        placeholder="Enter your name here" required>
+            </form>
+            </div>
+                    <!--Confirm button--> 
+                <div class="I_row3">  
+                    <form class="name_form" action="/game" method="post">
+                        <!--add alert asking to enter name if not provided?-->
+                    <input  type="submit"
+                            value="Confirm" 
+                            class="CButton"
+                            form="player_form"> 
+                </form>
 
-
-          
+            
+             
 
         </div>
     </div>
@@ -37,7 +49,10 @@
 </body>
 </html>
 
-  <form class="name_form" action="/game" method="post">
+
+
+
+            <!--<form class="name_form" action="/game" method="post">
                 <input type="text" name="username" placeholder="Pelaajan nimi" required>
                 <input type="submit" value="Aloita peli">
             </form>
