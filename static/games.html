@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="games.css">
+    <script src="games.js" defer></script>
+    <title>Arcadia - Pelivalikko</title>
+</head>
+<body>
+    <header class="top-bar">
+        <div class="top-left">
+            <a href="index.html" title="main page" id="back">← Back</a>
+            <div class="site-logo">logo</div>
+        </div>
+
+        <a href="profile.html" class="player-link">
+            <div class="player-box">
+                <div class="player-avatar">Ava</div>
+                <div class="player-info">
+                    <span id="player-name">pelaaja:</span>
+                    <span id="player-score">0 pts</span>
+                </div>
+            </div>
+        </a>
+    </header>
+
+    <main class="games">
+        <div class="game-card" data-game="game1">
+            <div class="game-logo" id="game_1_logo">....</div>
+            <h2 class="game-name" id="game_1_name">....</h2>
+            <div class="difficulty-group">
+                <button class="diff-btn" data-diff="easy">EASY</button>
+                <button class="diff-btn active" data-diff="medium">MEDIUM</button>
+                <button class="diff-btn" data-diff="hard">HARD</button>
+            </div>
+            <button class="start-btn">START</button>
+        </div>
+
+        <div class="game-card" data-game="game2">
+            <div class="game-logo" id="game_2_logo">....</div>
+            <h2 class="game-name" id="game_2_name">....</h2>
+            <div class="difficulty-group">
+                <button class="diff-btn" data-diff="easy">EASY</button>
+                <button class="diff-btn active" data-diff="medium">MEDIUM</button>
+                <button class="diff-btn" data-diff="hard">HARD</button>
+            </div>
+            <button class="start-btn">START</button>
+        </div>
+
+        <div class="game-card" data-game="game3">
+            <div class="game-logo" id="game_3_logo">....</div>
+            <h2 class="game-name" id="game_3_name">....</h2>
+            <div class="difficulty-group">
+                <button class="diff-btn" data-diff="easy">EASY</button>
+                <button class="diff-btn active" data-diff="medium">MEDIUM</button>
+                <button class="diff-btn" data-diff="hard">HARD</button>
+            </div>
+            <button class="start-btn">START</button>
+        </div>
+    </main>
+</body>
+</html>

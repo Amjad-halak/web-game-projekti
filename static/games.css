@@ -1,0 +1,154 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #f4f4f0;
+    color: #111;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: white;
+    border-bottom: 2px solid #222;
+}
+
+.top-bar a {
+    text-decoration: none;
+    color: #111;
+    font-weight: bold;
+}
+
+.top-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#back {
+    border: 2px solid #222;
+    padding: 6px 14px;
+    border-radius: 25px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+#back:hover {
+    background-color: #222;
+    color: white;
+}
+
+.site-logo {
+    background-color: #222;
+    color: white;
+    padding: 8px 14px;
+    font-weight: bold;
+}
+
+.games {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 30px;
+}
+
+.game-card {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: white;
+    border: 2px solid #222;
+    border-radius: 8px;
+    width: 240px;
+    padding: 20px;
+    text-align: center;
+}
+
+.game-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e0e0dc;
+    height: 110px;
+    border: 2px dashed #555;
+}
+
+.game-name {
+    margin: 0;
+    font-size: 20px;
+}
+
+.difficulty-group {
+    display: flex;
+    gap: 5px;
+}
+
+.diff-btn {
+    flex: 1;
+    padding: 6px;
+    border: 1px solid #222;
+    background-color: white;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.diff-btn:hover {
+    background-color: #e0e0dc;
+}
+
+.diff-btn.active {
+    background-color: #222;
+    color: white;
+}
+
+.diff-btn.active:hover {
+    background-color: #222;
+}
+
+.start-btn {
+    padding: 10px;
+    background-color: #222;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.start-btn:hover {
+    background-color: #444;
+}
+
+.player-box {
+    border: 2px solid #222;
+    background-color: white;
+    padding: 6px 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background-color 0.2s;
+}
+
+.player-box:hover {
+    background-color: #f4f4f0;
+}
+
+.player-avatar {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 11px;
+}
+
+.player-info {
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+}
