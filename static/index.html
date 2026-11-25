@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+    <script src="{{url_for('static', filename='script.js')}}" defer></script>
     <title>ArcadiaIndex</title>
 </head>
 
@@ -12,7 +12,7 @@
     <div class="parent">
         <div class="UpDiv">  <!--Smaller?-->
             <div class="logo_div">
-                <img src="img/ArcadiaWhite.png" alt="Logo_picture" />
+                <img src="{{url_for('static', filename='img/ArcadiaWhite.png')}}" alt="Logo_picture" />
             </div>
         </div>
         <div class="I_CenterDiv">
@@ -23,7 +23,7 @@
 
             <div class="I_row2">
                 <!--Form for entering name-->       
-            <form id="player_form" class="name_form" action="/game" method="post">
+            <form id="player_form" class="name_form" action="/menu" method="post">
                  <!--Name for the player-->
                 <input  type="text"
                         name="username"

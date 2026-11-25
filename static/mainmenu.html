@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>ArcadiaMenu</title>
     <script src="script.js" defer></script>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}"  />
 
 </head>
 
@@ -12,7 +12,7 @@
     <div class="parent">
         <div class="UpDiv">
             <div class="logo_div">
-                <img src="img/ArcadiaWhite.png" alt="Logo_picture" />
+                <img src="{{url_for('static', filename='img/ArcadiaWhite.png')}}" alt="Logo_picture" />
             </div>
         </div>
         <div class="M_CenterDiv">
@@ -23,7 +23,7 @@
             <div class="M_row2"></div>
             
             <div class="M_row3"> <!--Enter-->  
-                <form class="name_form" action="/game" method="post">
+                <form class="name_form" action="/menu" method="post">
                     <input  type="submit"
                             value="Enter" 
                             class="CButton">
@@ -33,7 +33,7 @@
             
             <div class="M_row4">
                 <!--Scoreboard-->
-                <form class="name_form" action="/game" method="post">
+                <form class="name_form" action="/menu" method="post">
                     <input type="submit" value="Scoreboard" class="CButton"> 
                 </form>
                 

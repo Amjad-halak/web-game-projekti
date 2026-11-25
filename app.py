@@ -1,13 +1,13 @@
 from flask import Flask, render_template, request
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='static')
 
 @app.route('/')
 
 def index():
     return render_template('index.html')
 
-@app.route('/game', methods=['GET', 'POST'])
+@app.route('/menu', methods=['POST'])
 
 def mainmenu():
     username = request.form.get('username')
