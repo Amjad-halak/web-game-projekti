@@ -1,6 +1,7 @@
 import json
 import os
 from flask import Flask, render_template, request, jsonify
+import minigame
 
 app = Flask(__name__)
 TIEDOSTO = "data/scores.json"
@@ -105,6 +106,23 @@ def hae_pistetaulukko():
     pelaajat.sort(key=lambda p: p["total_score"], reverse=True)
     return jsonify(pelaajat[:10])
 
+@app.route("/api/minigame/kentta", methods=["GET"])
+def hae_minigame_kentta():
+    kentta = minigame.luo_kentta()
+    return jsonify({
+        "koko": kentta["koko"],
+        "alku": list(kentta["alku"]),
+        "esteet": [list(e) for e in kentta["esteet"]],
+    })
 
+
+@app.route("/api/minigame/tarkista", methods=["POST"])
+def tarkista_minigame_reitti():
+    data = request.get_json() or {}
+    raaka_reitti = data.get("reitti", [])
+    reitti = [tuple(p) for p in raaka_reitti]
+
+    ok, viesti = minigame.tarkista_polku(reitti)
+    return jsonify({"ok": ok, "viesti": viesti})
 if __name__ == "__main__":
     app.run(debug=True)
