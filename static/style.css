@@ -1,7 +1,8 @@
 body {
     margin: 0;
-    background: #00000d;
-background: linear-gradient(90deg,rgba(0, 0, 13, 1) 0%, rgba(6, 4, 59, 1) 0%, rgba(5, 5, 5, 1) 51%, rgba(3, 3, 82, 1) 100%);
+    background-color: #f4f4f0;
+    color: #111;
+
 }
 
 .parent {
@@ -15,14 +16,15 @@ background: linear-gradient(90deg,rgba(0, 0, 13, 1) 0%, rgba(6, 4, 59, 1) 0%, rg
 }
     
 .UpDiv {
+    display: flex;
     grid-column: span 5 / span 5;
-    background-color: black;
-    height: 150px;
+    background-color: f4f4f0;
+    height: 120px;
     width: 100%;
     overflow: hidden;
     margin: 0px;
     padding: 2px;
-    border: 1px solid rgb(243, 95, 120);
+    border-bottom: 2px solid black;
 }
 
 .logo_div {
@@ -44,17 +46,19 @@ background: linear-gradient(90deg,rgba(0, 0, 13, 1) 0%, rgba(6, 4, 59, 1) 0%, rg
 }
 
 
-
-.CenterDiv {
-    background-color: #f5f5dc;
+.I_CenterDiv {
+    background-color: #f4f4f0;
     grid-column: span 3 / span 3;
     grid-row: span 3 / span 3;
-    grid-column-start: 2;
+    grid-column-start: 3;
     grid-row-start: 2;
-    outline: 5px solid rgb(0, 0, 0);
+    outline: 5px solid #222;
+    width: 700px;
+    height: 500px;
+    border-radius: 25px;
+
     
 }
-
 
 .I_row1, .I_row2, .I_row3 {
     display: flex;
@@ -63,9 +67,8 @@ background: linear-gradient(90deg,rgba(0, 0, 13, 1) 0%, rgba(6, 4, 59, 1) 0%, rg
     height: 33%;
     width: 100%;
     overflow: hidden;
-    border: 1px solid rgb(0, 0, 0); /* for now */
+    /*border: 1px solid #222;  for now */
 }
-
 
 .I_row1 {
     display: flex;
@@ -90,8 +93,24 @@ background: linear-gradient(90deg,rgba(0, 0, 13, 1) 0%, rgba(6, 4, 59, 1) 0%, rg
     gap: 100px;
 }
 
+.I_CenterDiv, .M_CenterDiv h1{
+    align-items: center;
+    text-align: center;
+}
 
-.row1, .row2, .row3, .row4, .row5 {
+.M_CenterDiv {
+    background-color: #f4f4f0;
+    grid-column: span 3 / span 3;
+    grid-row: span 3 / span 3;
+    grid-column-start: 3;
+    grid-row-start: 2;
+    outline: 5px solid #222;
+    width: 700px;
+    border-radius: 25px;
+    
+}
+
+.M_row1, .M_row2, .M_row3, .M_row4, .M_row5 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -100,10 +119,6 @@ background: linear-gradient(90deg,rgba(0, 0, 13, 1) 0%, rgba(6, 4, 59, 1) 0%, rg
     overflow: hidden;
 }
 
-.row1 {
-    background-color: black;
-    border: 2px solid black
-}
 
 
 .name_form {
@@ -115,14 +130,14 @@ background: linear-gradient(90deg,rgba(0, 0, 13, 1) 0%, rgba(6, 4, 59, 1) 0%, rg
 .name_input {
     padding: 10px;
     font-size: 16px;
-    border: 1px solid red;
-    /*border-radius: 12px;  rounded corners?*/ 
+    border: 1px solid #222;
+    border-radius: 25px;
     width: 500px;
 
 }
 
-.CButton {  /* voitte ehdottaa väriä  */
-    background-color: darkslateblue;
+.CButton {  
+    background-color: #222;
     color: white;
     border: none;
     /*border-radius: 12px;*/
@@ -131,12 +146,13 @@ background: linear-gradient(90deg,rgba(0, 0, 13, 1) 0%, rgba(6, 4, 59, 1) 0%, rg
     text-decoration: none;
     font-size: 16px;
     cursor: pointer;
-    width: 522px;
+    width: 75%;
+    border-radius: 4px
     
 }
 
-.CenterDiv h1{
-    align-items: center;
-    text-align: center;
+.CButton:hover {
+    background-color: #444;
 }
+
 
