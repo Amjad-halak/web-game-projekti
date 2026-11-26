@@ -10,19 +10,25 @@
 
 <body>
     <div class="parent">
-        <div class="UpDiv">  <!--Smaller?-->
-            <div class="logo_div">
+
+        <header class="top-bar">
+            <div class="top-left"></div>
+
+            <div class="top-center">
                 <img src="{{url_for('static', filename='img/ArcadiaWhite.png')}}" alt="Logo_picture" />
             </div>
-        </div>
+
+            <div class="top-right"></div>
+        </header>
+
         <div class="I_CenterDiv">
             <div class="I_row1">
-                <h1>Welcum to Arcadia!</h1> <!--Logo in black or nah? -->
+                <h1>Welcum to Arcadia!</h1> 
                 <h2>Enter your name to start the game</h2>
             </div>
 
             <div class="I_row2">
-                <!--Form for entering name-->       
+                      
             <form id="player_form" class="name_form" action="/menu" method="post">
                  <!--Name for the player-->
                 <input  type="text"
@@ -31,22 +37,15 @@
                         placeholder="Enter your name here" required>
             </form>
             </div>
-                    <!--Confirm button--> 
+
                 <div class="I_row3">  
-                        <!--Add alert asking to enter name if not provided?-->
                     <input  type="submit"
                             value="Confirm" 
                             class="CButton"
                             form="player_form">             
                 </div>
+        </div>
     </div>
     
 </body>
 </html>
-
-            <!--<form class="name_form" action="/game" method="post">
-                <input type="text" name="username" placeholder="Pelaajan nimi" required>
-                <input type="submit" value="Aloita peli">
-            </form>
-
-

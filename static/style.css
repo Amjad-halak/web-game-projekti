@@ -2,7 +2,7 @@ body {
     margin: 0;
     background-color: #f4f4f0;
     color: #111;
-
+    font-family: sans-serif;
 }
 
 .parent {
@@ -15,49 +15,63 @@ body {
 
 }
     
-.UpDiv {
-    display: flex;
-    grid-column: span 5 / span 5;
-    background-color: f4f4f0;
-    height: 120px;
-    width: 100%;
-    overflow: hidden;
-    margin: 0px;
-    padding: 2px;
-    border-bottom: 2px solid black;
-}
-
-.logo_div {
-    display: flex;
-    justify-content: left;
+.top-bar {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column: 1 / -1;
     align-items: center;
-    height: 100%;
-    width: 100%;
+
+    box-sizing: border-box;
     overflow: hidden;
+    background-color: f4f4f0;
+
+    height: 120px;
+    padding: 0 20px;
+    border-bottom: 2px solid black;
     
 }
 
-.logo_div img {
-    object-fit: contain;;
-    flex-shrink: 0;
-    height: 500px;
-    width: auto;
-
+.top-bar img {
+    display: block;
+    max-width: 100%;
+    max-height: 100px;
+    object-fit: contain;
+    transform: scale(4.5);
 }
 
+.top-bar a {
+    text-decoration: none;
+    color: #111;
+    font-weight: bold;
+}
+
+.top-center {
+    display: grid;
+    place-items: center;
+    
+}
+
+ .top-left, .top-center, .top-right {
+    display: flex;
+    align-items: center
+}
+
+.top-left {
+    justify-content: flex-start;
+}
+
+.top-center {
+    justify-content: center;
+ }
+ 
+.top-right {
+    justify-content: flex-end;
+}
 
 .I_CenterDiv {
-    background-color: #f4f4f0;
-    grid-column: span 3 / span 3;
-    grid-row: span 3 / span 3;
-    grid-column-start: 3;
-    grid-row-start: 2;
-    outline: 5px solid #222;
     width: 700px;
     height: 500px;
-    border-radius: 25px;
-
-    
+   
 }
 
 .I_row1, .I_row2, .I_row3 {
@@ -98,34 +112,49 @@ body {
     text-align: center;
 }
 
-.M_CenterDiv {
+.I_CenterDiv, .M_CenterDiv {
     background-color: #f4f4f0;
-    grid-column: span 3 / span 3;
-    grid-row: span 3 / span 3;
-    grid-column-start: 3;
-    grid-row-start: 2;
-    outline: 5px solid #222;
+    border: 2px solid #222;
+
+    border-radius: 8px;
     width: 700px;
-    border-radius: 25px;
-    
+
+    align-self: start;
+    box-sizing: border-box;
+
+    grid-column: 2 / span 3;
+    grid-row: 2 / span 3;
+    justify-self: center;
+
+}
+
+.M_CenterDiv {
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    height: 700px;
+  
 }
 
 .M_row1, .M_row2, .M_row3, .M_row4, .M_row5 {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 20%;
-    width: 100%;
-    overflow: hidden;
 }
-
 
 
 .name_form {
     gap: 30px;
     align-items: center;
     text-align: center;
+    width: 75%;
 }
+
+.M_CenterDiv .name_form {
+    justify-content: flex-end;
+
+}
+
+
 
 .name_input {
     padding: 10px;
@@ -143,10 +172,15 @@ body {
     /*border-radius: 12px;*/
     padding: 10px 20px;
     text-align: center;
+
     text-decoration: none;
     font-size: 16px;
+    font-weight: bold;
+
     cursor: pointer;
-    width: 75%;
+    transition: background-color 0.2s;
+
+    width: 400px;
     border-radius: 4px
     
 }
@@ -155,4 +189,29 @@ body {
     background-color: #444;
 }
 
+.player-box {
+    border: 2px solid #222;
+    background-color: white;
+    padding: 6px 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background-color 0.2s;
+}
 
+.player-avatar {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 11px;
+}
+
+.player-info {
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+}
