@@ -3,10 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="games.css">
-    <title>ohjee sivu</title>
+    <link rel="stylesheet" href="ohjee.css">
+    <title>Arcadia - Ohjeet</title>
 </head>
 <body>
-    
+
+    <header class="top-bar">
+        <div class="top-left">
+            <a href="index.html" title="main page" id="back">← Back</a>
+        </div>
+
+        <div class="top-center">
+            <img src="img/ArcadiaWhite.png" alt="Logo">
+        </div>
+
+        <div class="top-right">
+            <a href="profile.html" class="player-link">
+                <div class="player-box">
+                    <div class="player-avatar">Ava</div>
+                    <div class="player-info">
+                        <span id="player-name">pelaaja:</span>
+                        <span id="player-score">0 pts</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </header>
+
+    <main class="instructions-container">
+        <h1>HOW TO PLAY - ARCADIA</h1>
+
+        <section class="steps-grid">
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <div class="step-icon">🎮</div>
+                <h2>CHOOSE GAME & DIFFICULTY</h2>
+                <p>Pick any of the mini-games and select Easy, Medium, or Hard.</p>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <div class="step-icon">🎯</div>
+                <h2>PLAY & EARN POINTS</h2>
+                <p>Complete challenges before time or lives run out to score points.</p>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <div class="step-icon">🏅</div>
+                <h2>LEVEL UP & COMPETE</h2>
+                <p>Climb the global Score Board and unlock higher player levels.</p>
+            </div>
+        </section>
+
+        <section class="scoring-section">
+            <h3>SCORING & DIFFICULTY SYSTEM</h3>
+            <div class="scoring-pills">
+                <span class="score-pill">Easy: +10 pts</span>
+                <span class="score-pill">Medium: +20 pts</span>
+                <span class="score-pill">Hard: +30 pts</span>
+            </div>
+        </section>
+    </main>
+
 </body>
 </html>
