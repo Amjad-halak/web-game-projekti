@@ -2,27 +2,28 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>ArcadiaMenu</title>
-    <script src="script.js" defer></script>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}"  />
+    <title>Arcadia</title>
+    <script src=" {{url_for('static', filename='script.js')}}" defer></script>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}"  />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 </head>
 
 <body>
     <div class="parent">
         <header class="top-bar">
-            <div class="top-left">Vasen</div>
+            <div class="top-left">vasen</div>
 
             <div class="top-center">
-                <img src="{{url_for('static', filename='img/ArcadiaWhite.png')}}" alt="Logo_picture" />
+                <img src="{{url_for('static', filename='img/Arcadia.png')}}" alt="logo" />
             </div>
 
             <div class="top-right">
-                <a href="profile.html" class="player-link">
+                <a href="mainmenu.html" class="player-link">
             <div class="player-box">
                 <div class="player-avatar">Ava</div>
                 <div class="player-info">
-                    <span id="player-name">pelaaja:</span>
+                    <span id="player-name">{{session.get('username') }}</span>
                     <span id="player-score">0 pts</span>
                 </div>
             </div>
@@ -30,38 +31,33 @@
             </div>
         </header>
         
-        <div class="M_CenterDiv">
+        <div class="m_CenterDiv">
                 
-            <div class="M_row1"></div>
+            <div class="m_row1">Kuva tähän peleistä poikki viivalla?</div>
 
-            <div class="M_row2">
+            <div class="m_row2">
                 <form class="name_form" action="/games" method="post">
                     <input  type="submit"
                             value="Games" 
-                            class="CButton">
+                            class="center-button">
                 </form>
             </div>
 
-            <div class="M_row3">                <!--Scoreboard-->
+            <div class="m_row3"> 
                 <form class="name_form" action="/how_to" method="post">
                     <input  type="submit"
                             value="How to play" 
-                            class="CButton">
+                            class="center-button">
                 </form>
             </div>
             
-            <div class="M_row4">
-                <!--Scoreboard-->
-                <form class="name_form" action="/menu" method="post">
-                    <input type="submit" value="Scoreboard" class="CButton"> 
+            <div class="m_row4">
+                
+                <form class="name_form" action="/scoreboard" method="post">
+                    <input type="submit" value="Scoreboard" class="center-button"> 
                 </form>
             </div> 
 
-            <div class="M_row5">
-                <form class="name_form" action="/name" method="post">
-                    <input type="submit" value="Return" class="CButton"> 
-                </form>
-            </div>
         </div>
     </div>
     
